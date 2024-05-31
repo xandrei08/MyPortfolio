@@ -1,0 +1,46 @@
+$color1-white: #dad9d6;
+$color2-orange: #db963f;
+$color3-purlple: #e6cbf9;
+$black-color:#000;
+$white-color:#fff;
+
+$font-size1:2.5rem;
+$font-size2:1.1rem;
+$font-size3:2vw;
+
+
+
+@mixin displayFlex($display,$items){
+    display: $display;
+    align-items: $items;
+}
+@mixin displayFlex1($display,$direction){
+    display:$display;
+    flex-direction: $direction;
+}
+@mixin displayFlex2($display,$items){
+    display:$display;
+    justify-content: $items;
+}
+
+@mixin displayFlex3($display,$direction,$items){
+    display:$display;
+    flex-direction: $direction;
+    justify-content: $items;
+}
+
+@mixin displayFlex4($display,$items,$direction){
+    display:$display;
+    align-items: $items;
+    justify-content: $direction;
+}
+
+@mixin displayGrid($grid,$columns){
+display:$grid;
+grid-template-columns: $columns;
+}
+
+@mixin widthHeight($width,$height){
+    width:$width;
+    height:$height;
+}

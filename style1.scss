@@ -1,0 +1,345 @@
+@import "./partials/variables";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,400;0,8..144,700;1,8..144,500&display=swap');
+body{
+    font-family: 'Roboto Serif', serif;
+    box-sizing: border-box;
+    background-color:#1d1f23;
+}
+
+nav,p,li,a,ul,h2,h1,p,img,footer{
+    margin:0;
+    padding:0;
+}
+
+.container{
+    margin:0 10rem;
+}
+nav{
+    display:flex;
+}
+
+nav > ul{
+    width: 100rem;
+   @include displayFlex2(flex,flex-end);
+   .about2{
+       margin:0;
+   }
+ }
+
+ nav > ul > li{
+    padding:1rem;
+    list-style: none;
+}
+nav > ul > li > a{
+    text-decoration: none;
+    color: $color1-white;
+    font-size: $font-size2;
+}
+.line1,.line2, .line3{
+    background-color: $color3-purlple;
+    animation: left-to-right 0.3s forwards ease-in-out;
+    display:none;
+}
+.projects{
+    text-decoration: underline;
+    color:$black-color;
+    font-weight: 700;
+}
+
+@keyframes left-to-right {
+    0%{
+       @include widthHeight(0,0);
+    }
+
+    100%{
+        @include widthHeight(100%, 0.1rem);
+    }
+}
+.main{
+    margin-top:2.5rem;
+    @include widthHeight(100%,40rem);
+    @include displayGrid(grid, 1.5fr 2fr)
+}
+
+.main-left{
+    background:rgba(218, 217, 214, 0.01);
+    padding:3vh 4vw 2vh 4vw;
+    @include displayFlex3(flex,column,space-evenly);
+}
+
+.main-left > .header{
+    border-bottom:2px solid $color3-purlple;
+    padding: 3vh 0;
+    color:$color1-white;
+}
+.web{
+    border-bottom:2px solid $color3-purlple;
+    height: 10vh;
+    @include displayFlex(flex,center);
+   }
+.web > h2{
+    font-size:$font-size3;
+    color: $color1-white;
+}
+
+.developer{
+    border-bottom:2px solid $color3-purlple;
+    height: 10vh;
+    @include displayFlex(flex,center);
+}
+
+.developer > h2{
+    font-size: $font-size3;
+    color:$color1-white;
+}
+
+.main-right{
+    background-color: $color2-orange;
+    border-left:3px solid $black-color;
+    @include displayGrid(grid, 1.2fr 1fr);
+}
+
+.main-right > .main-right-img {
+    @include displayFlex4(flex,center,center);
+}
+.main-right > .main-right-img > img{
+    width: 80%;
+    border-radius: 50%;
+}
+
+.main-right-text {
+    @include displayFlex(flex,center);
+    padding:0 2vw;
+    color:$black-color;
+}
+
+.main-right .main-right-text .content-text{
+    margin-top:0.7vh;
+    font-size:1vw;
+    letter-spacing: 0.08vh;
+}
+
+footer{
+    margin-top:4vh;
+    height: 6vh;
+    display:grid;
+    @include displayGrid(grid, 4fr 1fr);
+}
+footer > .footer-left{
+    height: 6vh;
+    width: 30%;
+    @include displayFlex2(flex,space-between);
+}
+
+footer > .footer-left > .f-left a{
+    text-decoration: none;
+    color:#EEF4ED;
+}
+footer > .footer-left > .f-left > a:hover{
+    color:$color2-orange;
+}
+footer > .footer-right{
+@include displayGrid(grid, 4fr 1fr);
+font-size:1.5vw;
+align-items: center;
+
+}
+
+.fa-linkedin:before{
+    color:$color1-white;
+}
+.fa-github:before{
+    color:$color1-white;
+}
+.github{
+    text-align: right;
+}
+.link{
+    text-align: center;
+}
+
+.firstRow{
+    @include displayGrid(grid,1fr 3fr 1fr);
+    /* background-color: #ffff; */
+    margin-top:5vh;
+}
+
+.skills{
+    margin:0;
+    .header > h2{
+     color: $color1-white;
+    text-align: left;
+    margin-top:5%;
+    font-family: 'roboto';
+    font-size:$font-size1;
+    }
+    .header > input{
+    outline-color: $color2-orange;
+    display:none;
+    }
+}
+.skills > .row{
+    margin-top:5%;
+}
+.skills > .row > div{
+    padding:5% 0 10% 0;
+    text-align: center;
+    border:2px solid $color1-white;
+}
+.skills > .row > div > a{
+    font-family:'roboto';
+    color:$color1-white;
+    font-size:2.5rem;
+    text-decoration: none;
+}
+.html1, .css1, .js1, .scss1, .node1, .bootstrap1{
+    display:none;
+}
+.alertBox{
+  display:block;
+  position: absolute;
+  top: 30%;
+  left:40%;
+  background-color:#1d1f23;
+  padding:1.5%;
+  border:1px solid $color1-white;
+  opacity: 0;
+  animation:showAlert 0.5s linear forwards;
+  @keyframes showAlert {
+      from{ 
+          opacity:0;
+          transform:translateY(-100px)
+    }
+      to {
+          opacity: 1;
+          transform:translateY(0);
+        }
+  }
+
+    .p-skill{
+        color:$color1-white;
+    }.btns{
+       margin-top:7%;
+        @include displayFlex3(flex,row,space-evenly)
+    } .btnYes,.btnNo{
+        width: 30%;
+    }.btnYes{
+        background-color:green;
+        border:none;
+        color:$color1-white;
+        font-weight: bold;
+    }.btnNo{
+        background-color:red;
+        border:none;
+        color:$color1-white;
+        font-weight: bold;
+    }
+}
+.about{
+    @include displayFlex3(flex,column,space-between);
+    margin-top:5%;
+    .fist-3Cards{
+        @include displayFlex2(flex,space-between)
+    }
+    .last-3Cards{
+        margin-top:2%;
+        @include displayFlex2(flex,space-between)
+    }
+    .card-title{
+      font-weight: 700;
+    }
+    .btn-primary{
+        margin-top:5%;
+        background-color: transparent;
+        border: 0.12vw solid $color2-orange;
+        color:#1d1f23;
+        font-weight: 600;
+    }
+    .btn-primary:hover{
+        background-color: $color2-orange;
+    }
+    .responsive{
+        background-color: green;
+        color: $white-color;
+        width:fit-content;
+        padding:1% 2%;
+        margin-top:2%;
+    }
+    .not-responsive{
+        background-color: red;
+        color: $white-color;
+        width:fit-content;
+        padding:1% 2%;
+        margin-top:2%;
+    }
+}
+
+@media only screen and (max-width: 768px) and (orientation : portrait)
+{
+
+.container{
+    margin:0;
+}
+.nav > ul{
+    display:inline-block;
+    width: 20%;
+}
+.main{
+    @include displayFlex1(flex,column);
+   .main-left > h1,h2{
+        font-size:calc(1.375rem + 1.5vw);
+       
+    }
+    .main-right{
+        padding:2% 0;
+    .content-header {
+        h2{
+        font-size:6vw;
+      }
+      .content-text{
+         font-size:2.5vw;
+      }
+      .projects{
+         font-size:3.5vw;
+      } 
+  }
+ }
+}
+.row{
+    display:inline-block;
+    width:60rem;
+    margin-left:1.8%;
+}
+.about{
+    display:inline-block;
+    width: 60rem;
+    margin-left:5%;
+    .fist-3Cards{
+        display:inline-block;
+        width:60rem;
+        .card{
+            margin-bottom:2%;
+        }
+    }
+    .last-3Cards{
+        display:inline-block;
+        width:60rem;
+        .card{
+            margin-bottom:2%;
+        }
+    }
+}
+footer{
+    @include displayFlex1(flex,row);
+    width:50rem;
+    .footer-left > div > a {
+        font-size:3vw;
+    }
+}
+.alertBox{
+    margin-left:5.5%;
+    left:0;
+    padding:3%;
+}
+}

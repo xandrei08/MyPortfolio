@@ -1,0 +1,25 @@
+body{
+    margin:10% 20%;
+}
+
+/* .terms-page{
+    margin:10% 20%;
+}
+.privacyPolicy{
+    margin:10% 20%;
+} */
+
+
+
+.content{
+    background: #eee;
+    border-radius: 5px;
+    margin: 16px 0;
+    resize: both;
+    overflow-x: hidden;
+    max-width: 50vw;
+    max-height: 20vh;
+    min-width: 10vw;
+    min-height:10vh;
+}
+
