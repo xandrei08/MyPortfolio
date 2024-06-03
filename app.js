@@ -25,7 +25,6 @@ privacy.addEventListener("click", function(){
 window.addEventListener("scroll", showBox)
 let once = true;
 function showBox(){
-  const scrollable = document.documentElement.scrollHeight - window.innerHeight;
   const scrolled = Math.trunc(window.scrollY);
   if(scrolled > 150 && once === true){
     var box = document.createElement('div');
@@ -109,7 +108,7 @@ function revealSkills() {
             arrayRevealSkill[2].style.display = "block";
             return valueOn;
           }
-          else if(valueOn.includes(".scss")){
+          else if(valueOn.includes(".react")){
             arraySymbols[3].style.display = "none";
             arrayRevealSkill[3].style.display = "block";
             return valueOn;

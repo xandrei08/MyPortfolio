@@ -13,14 +13,14 @@ nav,p,li,a,ul,h2,h1,p,img,footer{
 }
 
 .container{
-    margin:0 10rem;
+    margin:0 13vw;
 }
 nav{
     display:flex;
 }
 
 nav > ul{
-    width: 100rem;
+    width: 100vw;
    @include displayFlex2(flex,flex-end);
    .about2{
        margin:0;
@@ -28,7 +28,7 @@ nav > ul{
  }
 
  nav > ul > li{
-    padding:1rem;
+    padding:1vw;
     list-style: none;
 }
 nav > ul > li > a{
@@ -41,24 +41,19 @@ nav > ul > li > a{
     animation: left-to-right 0.3s forwards ease-in-out;
     display:none;
 }
-.projects{
-    text-decoration: underline;
-    color:$black-color;
-    font-weight: 700;
-}
-
 @keyframes left-to-right {
     0%{
        @include widthHeight(0,0);
     }
 
     100%{
-        @include widthHeight(100%, 0.1rem);
+        @include widthHeight(100%, 0.1vw);
     }
 }
 .main{
-    margin-top:2.5rem;
-    @include widthHeight(100%,40rem);
+    height: auto;
+    margin-top:2.5vw;
+    @include widthHeight(100%,40vw);
     @include displayGrid(grid, 1.5fr 2fr)
 }
 
@@ -69,12 +64,15 @@ nav > ul > li > a{
 }
 
 .main-left > .header{
-    border-bottom:2px solid $color3-purlple;
+    border-bottom:0.1vw solid $color3-purlple;
     padding: 3vh 0;
     color:$color1-white;
+    h1{
+        font-size: $font-size3; 
+    }
 }
 .web{
-    border-bottom:2px solid $color3-purlple;
+    border-bottom:0.1vw solid $color3-purlple;
     height: 10vh;
     @include displayFlex(flex,center);
    }
@@ -84,7 +82,7 @@ nav > ul > li > a{
 }
 
 .developer{
-    border-bottom:2px solid $color3-purlple;
+    border-bottom: 0.1vw solid $color3-purlple;
     height: 10vh;
     @include displayFlex(flex,center);
 }
@@ -96,7 +94,7 @@ nav > ul > li > a{
 
 .main-right{
     background-color: $color2-orange;
-    border-left:3px solid $black-color;
+    border-left:0.15vw solid $black-color;
     @include displayGrid(grid, 1.2fr 1fr);
 }
 
@@ -104,8 +102,8 @@ nav > ul > li > a{
     @include displayFlex4(flex,center,center);
 }
 .main-right > .main-right-img > img{
-    width: 80%;
-    border-radius: 50%;
+    width: 20vw;
+    border-radius: 2vw;
 }
 
 .main-right-text {
@@ -119,6 +117,12 @@ nav > ul > li > a{
     font-size:1vw;
     letter-spacing: 0.08vh;
 }
+.projects{
+    text-decoration: underline;
+    color:$black-color;
+    font-weight: 700;
+}
+
 
 footer{
     margin-top:4vh;
@@ -128,7 +132,7 @@ footer{
 }
 footer > .footer-left{
     height: 6vh;
-    width: 30%;
+    width: 20vw;
     @include displayFlex2(flex,space-between);
 }
 
@@ -167,6 +171,8 @@ align-items: center;
 
 .skills{
     margin:0;
+    display:inline-block;
+    width: 100vw;
     .header > h2{
      color: $color1-white;
     text-align: left;
@@ -181,19 +187,22 @@ align-items: center;
 }
 .skills > .row{
     margin-top:5%;
+    display:inline-block;
 }
 .skills > .row > div{
     padding:5% 0 10% 0;
     text-align: center;
-    border:2px solid $color1-white;
+    border:0.1vw solid $color1-white;
+    display:inline-block;
+    width: 24vw;
 }
 .skills > .row > div > a{
     font-family:'roboto';
     color:$color1-white;
-    font-size:2.5rem;
+    font-size:3vw;
     text-decoration: none;
 }
-.html1, .css1, .js1, .scss1, .node1, .bootstrap1{
+.html1, .css1, .js1, .react1, .node1, .bootstrap1{
     display:none;
 }
 .alertBox{
@@ -203,13 +212,13 @@ align-items: center;
   left:40%;
   background-color:#1d1f23;
   padding:1.5%;
-  border:1px solid $color1-white;
+  border:0.05vw solid $color1-white;
   opacity: 0;
   animation:showAlert 0.5s linear forwards;
   @keyframes showAlert {
       from{ 
           opacity:0;
-          transform:translateY(-100px)
+          transform:translateY(-5vw)
     }
       to {
           opacity: 1;
@@ -237,14 +246,15 @@ align-items: center;
     }
 }
 .about{
-    @include displayFlex3(flex,column,space-between);
-    margin-top:5%;
-    .fist-3Cards{
-        @include displayFlex2(flex,space-between)
-    }
-    .last-3Cards{
-        margin-top:2%;
-        @include displayFlex2(flex,space-between)
+    display:inline-block;
+    margin-top:2%;
+    text-align: center;
+    .card{
+        display:inline-block;
+        vertical-align: top;
+        margin:2% 2% 0 0;
+        text-align: start;
+        height:auto;
     }
     .card-title{
       font-weight: 700;
@@ -277,22 +287,40 @@ align-items: center;
 
 @media only screen and (max-width: 768px) and (orientation : portrait)
 {
+    .alertBox{
+    left:0;
+    margin-left:21vw;
+    width:60vw;
+    text-align: center;
+    padding:3vw;
+    }
 
 .container{
     margin:0;
-}
-.nav > ul{
-    display:inline-block;
-    width: 20%;
+
+nav > ul > li > a {
+  font-size: 4vw;
 }
 .main{
     @include displayFlex1(flex,column);
-   .main-left > h1,h2{
-        font-size:calc(1.375rem + 1.5vw);
-       
+    height: auto;
+   .main-left { 
+        div > h1 {
+        font-size:5.5vw;
+        text-align: center;
     }
+        div > h2 {
+            font-size:5.5vw;
+            text-align: center;
+            width: 100vw;
+        }
+    } 
+    
     .main-right{
         padding:2% 0;
+        div > img{
+            width:35vw;
+        }
     .content-header {
         h2{
         font-size:6vw;
@@ -303,43 +331,45 @@ align-items: center;
       .projects{
          font-size:3.5vw;
       } 
-  }
+    }
+   }
  }
-}
+ .skills{
+     div > h2{
+         font-size:6vw;
+     }
 .row{
     display:inline-block;
-    width:60rem;
-    margin-left:1.8%;
+    div{
+        width:46.5vw;
+        a{
+            font-size:5.5vw;
+        }
+    }
 }
+
+ }
 .about{
     display:inline-block;
-    width: 60rem;
-    margin-left:5%;
-    .fist-3Cards{
-        display:inline-block;
-        width:60rem;
-        .card{
-            margin-bottom:2%;
-        }
-    }
-    .last-3Cards{
-        display:inline-block;
-        width:60rem;
-        .card{
-            margin-bottom:2%;
-        }
-    }
+    width: 96vw;
 }
 footer{
     @include displayFlex1(flex,row);
-    width:50rem;
-    .footer-left > div > a {
+    width:100vw;
+    .footer-left { 
+        width: 70vw;
+        div > a {
         font-size:3vw;
+      }
     }
-}
-.alertBox{
-    margin-left:5.5%;
-    left:0;
-    padding:3%;
-}
+    .footer-right{
+        width: 25vw;
+        text-align: right;
+        a{
+            font-size:7vw;
+            margin-right:2vw;
+        }
+    }
+  }
+ }
 }

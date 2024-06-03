@@ -12,7 +12,7 @@ nav, p, li, a, ul, h2, h1, p, img, footer {
 }
 
 .container {
-  margin: 0 10rem;
+  margin: 0 13vw;
 }
 
 nav {
@@ -22,7 +22,7 @@ nav {
 }
 
 nav > ul {
-  width: 100rem;
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -36,14 +36,14 @@ nav > ul .about2 {
 }
 
 nav > ul > li {
-  padding: 1rem;
+  padding: 1vw;
   list-style: none;
 }
 
 nav > ul > li > a {
   text-decoration: none;
   color: #dad9d6;
-  font-size: 1.1rem;
+  font-size: 1.1vw;
 }
 
 .line1, .line2, .line3 {
@@ -53,12 +53,6 @@ nav > ul > li > a {
   display: none;
 }
 
-.projects {
-  text-decoration: underline;
-  color: #000;
-  font-weight: 700;
-}
-
 @-webkit-keyframes left-to-right {
   0% {
     width: 0;
@@ -66,7 +60,7 @@ nav > ul > li > a {
   }
   100% {
     width: 100%;
-    height: 0.1rem;
+    height: 0.1vw;
   }
 }
 
@@ -77,14 +71,15 @@ nav > ul > li > a {
   }
   100% {
     width: 100%;
-    height: 0.1rem;
+    height: 0.1vw;
   }
 }
 
 .main {
-  margin-top: 2.5rem;
+  height: auto;
+  margin-top: 2.5vw;
   width: 100%;
-  height: 40rem;
+  height: 40vw;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1.5fr 2fr;
@@ -107,13 +102,17 @@ nav > ul > li > a {
 }
 
 .main-left > .header {
-  border-bottom: 2px solid #e6cbf9;
+  border-bottom: 0.1vw solid #e6cbf9;
   padding: 3vh 0;
   color: #dad9d6;
 }
 
+.main-left > .header h1 {
+  font-size: 2.5vw;
+}
+
 .web {
-  border-bottom: 2px solid #e6cbf9;
+  border-bottom: 0.1vw solid #e6cbf9;
   height: 10vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -124,12 +123,12 @@ nav > ul > li > a {
 }
 
 .web > h2 {
-  font-size: 2vw;
+  font-size: 2.5vw;
   color: #dad9d6;
 }
 
 .developer {
-  border-bottom: 2px solid #e6cbf9;
+  border-bottom: 0.1vw solid #e6cbf9;
   height: 10vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -140,13 +139,13 @@ nav > ul > li > a {
 }
 
 .developer > h2 {
-  font-size: 2vw;
+  font-size: 2.5vw;
   color: #dad9d6;
 }
 
 .main-right {
   background-color: #db963f;
-  border-left: 3px solid #000;
+  border-left: 0.15vw solid #000;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1.2fr 1fr;
@@ -166,8 +165,8 @@ nav > ul > li > a {
 }
 
 .main-right > .main-right-img > img {
-  width: 80%;
-  border-radius: 50%;
+  width: 20vw;
+  border-radius: 2vw;
 }
 
 .main-right-text {
@@ -187,6 +186,12 @@ nav > ul > li > a {
   letter-spacing: 0.08vh;
 }
 
+.projects {
+  text-decoration: underline;
+  color: #000;
+  font-weight: 700;
+}
+
 footer {
   margin-top: 4vh;
   height: 6vh;
@@ -199,7 +204,7 @@ footer {
 
 footer > .footer-left {
   height: 6vh;
-  width: 30%;
+  width: 20vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -255,6 +260,8 @@ footer > .footer-right {
 
 .skills {
   margin: 0;
+  display: inline-block;
+  width: 100vw;
 }
 
 .skills .header > h2 {
@@ -262,7 +269,7 @@ footer > .footer-right {
   text-align: left;
   margin-top: 5%;
   font-family: 'roboto';
-  font-size: 2.5rem;
+  font-size: 2.5vw;
 }
 
 .skills .header > input {
@@ -272,18 +279,21 @@ footer > .footer-right {
 
 .skills > .row {
   margin-top: 5%;
+  display: inline-block;
 }
 
 .skills > .row > div {
   padding: 5% 0 10% 0;
   text-align: center;
-  border: 2px solid #dad9d6;
+  border: 0.1vw solid #dad9d6;
+  display: inline-block;
+  width: 24vw;
 }
 
 .skills > .row > div > a {
   font-family: 'roboto';
   color: #dad9d6;
-  font-size: 2.5rem;
+  font-size: 3vw;
   text-decoration: none;
 }
 
@@ -298,7 +308,7 @@ footer > .footer-right {
   left: 40%;
   background-color: #1d1f23;
   padding: 1.5%;
-  border: 1px solid #dad9d6;
+  border: 0.05vw solid #dad9d6;
   opacity: 0;
   -webkit-animation: showAlert 0.5s linear forwards;
           animation: showAlert 0.5s linear forwards;
@@ -307,8 +317,8 @@ footer > .footer-right {
 @-webkit-keyframes showAlert {
   from {
     opacity: 0;
-    -webkit-transform: translateY(-100px);
-            transform: translateY(-100px);
+    -webkit-transform: translateY(-5vw);
+            transform: translateY(-5vw);
   }
   to {
     opacity: 1;
@@ -320,8 +330,8 @@ footer > .footer-right {
 @keyframes showAlert {
   from {
     opacity: 0;
-    -webkit-transform: translateY(-100px);
-            transform: translateY(-100px);
+    -webkit-transform: translateY(-5vw);
+            transform: translateY(-5vw);
   }
   to {
     opacity: 1;
@@ -367,36 +377,17 @@ footer > .footer-right {
 }
 
 .about {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-top: 5%;
-}
-
-.about .fist-3Cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.about .last-3Cards {
+  display: inline-block;
   margin-top: 2%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  text-align: center;
+}
+
+.about .card {
+  display: inline-block;
+  vertical-align: top;
+  margin: 2% 2% 0 0;
+  text-align: start;
+  height: auto;
 }
 
 .about .card-title {
@@ -436,14 +427,20 @@ footer > .footer-right {
 }
 
 @media only screen and (max-width: 768px) and (orientation: portrait) {
+  .alertBox {
+    left: 0;
+    margin-left: 21vw;
+    width: 60vw;
+    text-align: center;
+    padding: 3vw;
+  }
   .container {
     margin: 0;
   }
-  .nav > ul {
-    display: inline-block;
-    width: 20%;
+  .container nav > ul > li > a {
+    font-size: 4vw;
   }
-  .main {
+  .container .main {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -451,47 +448,49 @@ footer > .footer-right {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    height: auto;
   }
-  .main .main-left > h1, .main h2 {
-    font-size: calc(1.375rem + 1.5vw);
+  .container .main .main-left div > h1 {
+    font-size: 5.5vw;
+    text-align: center;
   }
-  .main .main-right {
+  .container .main .main-left div > h2 {
+    font-size: 5.5vw;
+    text-align: center;
+    width: 100vw;
+  }
+  .container .main .main-right {
     padding: 2% 0;
   }
-  .main .main-right .content-header h2 {
+  .container .main .main-right div > img {
+    width: 35vw;
+  }
+  .container .main .main-right .content-header h2 {
     font-size: 6vw;
   }
-  .main .main-right .content-header .content-text {
+  .container .main .main-right .content-header .content-text {
     font-size: 2.5vw;
   }
-  .main .main-right .content-header .projects {
+  .container .main .main-right .content-header .projects {
     font-size: 3.5vw;
   }
-  .row {
+  .container .skills div > h2 {
+    font-size: 6vw;
+  }
+  .container .skills .row {
     display: inline-block;
-    width: 60rem;
-    margin-left: 1.8%;
   }
-  .about {
+  .container .skills .row div {
+    width: 46.5vw;
+  }
+  .container .skills .row div a {
+    font-size: 5.5vw;
+  }
+  .container .about {
     display: inline-block;
-    width: 60rem;
-    margin-left: 5%;
+    width: 96vw;
   }
-  .about .fist-3Cards {
-    display: inline-block;
-    width: 60rem;
-  }
-  .about .fist-3Cards .card {
-    margin-bottom: 2%;
-  }
-  .about .last-3Cards {
-    display: inline-block;
-    width: 60rem;
-  }
-  .about .last-3Cards .card {
-    margin-bottom: 2%;
-  }
-  footer {
+  .container footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -499,15 +498,21 @@ footer > .footer-right {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    width: 50rem;
+    width: 100vw;
   }
-  footer .footer-left > div > a {
+  .container footer .footer-left {
+    width: 70vw;
+  }
+  .container footer .footer-left div > a {
     font-size: 3vw;
   }
-  .alertBox {
-    margin-left: 5.5%;
-    left: 0;
-    padding: 3%;
+  .container footer .footer-right {
+    width: 25vw;
+    text-align: right;
+  }
+  .container footer .footer-right a {
+    font-size: 7vw;
+    margin-right: 2vw;
   }
 }
 /*# sourceMappingURL=style1.css.map */
