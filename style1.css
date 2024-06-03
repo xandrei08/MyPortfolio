@@ -270,6 +270,8 @@ footer > .footer-right {
 }
 .alertBox .btnYes, .alertBox .btnNo {
   width: 30%;
+  text-align: center;
+  text-decoration: none;
 }
 .alertBox .btnYes {
   background-color: green;

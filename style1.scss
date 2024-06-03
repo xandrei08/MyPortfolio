@@ -237,6 +237,8 @@ align-items: center;
         @include displayFlex3(flex,row,space-evenly)
     } .btnYes,.btnNo{
         width: 30%;
+        text-align: center;
+        text-decoration: none;
     }.btnYes{
         background-color:green;
         border:none;

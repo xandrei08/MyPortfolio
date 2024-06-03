@@ -34,7 +34,7 @@ function showBox(){
        `
        <p class = "p-skill"> ${pText}</p>
        <div class = "btns"> 
-            <button class = "btnYes"> Yes </button>
+            <a class = "btnYes" href = "#skills-id"> Yes </a>
             <button class = "btnNo"> No </button>
        </div> `
         document.body.appendChild(box);
