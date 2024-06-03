@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,400;0,8..144,700;1,8..144,500&display=swap");
 body {
-  font-family: 'Roboto Serif', serif;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  font-family: "Roboto Serif", serif;
+  box-sizing: border-box;
   background-color: #1d1f23;
+  overflow-x: hidden;
 }
 
 nav, p, li, a, ul, h2, h1, p, img, footer {
@@ -11,26 +11,15 @@ nav, p, li, a, ul, h2, h1, p, img, footer {
   padding: 0;
 }
 
-.container {
-  margin: 0 13vw;
-}
-
 nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 nav > ul {
   width: 100vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
 }
-
 nav > ul .about2 {
   margin: 0;
 }
@@ -48,20 +37,8 @@ nav > ul > li > a {
 
 .line1, .line2, .line3 {
   background-color: #e6cbf9;
-  -webkit-animation: left-to-right 0.3s forwards ease-in-out;
-          animation: left-to-right 0.3s forwards ease-in-out;
+  animation: left-to-right 0.3s forwards ease-in-out;
   display: none;
-}
-
-@-webkit-keyframes left-to-right {
-  0% {
-    width: 0;
-    height: 0;
-  }
-  100% {
-    width: 100%;
-    height: 0.1vw;
-  }
 }
 
 @keyframes left-to-right {
@@ -74,31 +51,21 @@ nav > ul > li > a {
     height: 0.1vw;
   }
 }
-
 .main {
   height: auto;
   margin-top: 2.5vw;
   width: 100%;
   height: 40vw;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1.5fr 2fr;
-      grid-template-columns: 1.5fr 2fr;
+  grid-template-columns: 1.5fr 2fr;
 }
 
 .main-left {
   background: rgba(218, 217, 214, 0.01);
   padding: 3vh 4vw 2vh 4vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .main-left > .header {
@@ -106,7 +73,6 @@ nav > ul > li > a {
   padding: 3vh 0;
   color: #dad9d6;
 }
-
 .main-left > .header h1 {
   font-size: 2.5vw;
 }
@@ -114,12 +80,8 @@ nav > ul > li > a {
 .web {
   border-bottom: 0.1vw solid #e6cbf9;
   height: 10vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .web > h2 {
@@ -130,12 +92,8 @@ nav > ul > li > a {
 .developer {
   border-bottom: 0.1vw solid #e6cbf9;
   height: 10vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .developer > h2 {
@@ -146,22 +104,14 @@ nav > ul > li > a {
 .main-right {
   background-color: #db963f;
   border-left: 0.15vw solid #000;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1.2fr 1fr;
-      grid-template-columns: 1.2fr 1fr;
+  grid-template-columns: 1.2fr 1fr;
 }
 
 .main-right > .main-right-img {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .main-right > .main-right-img > img {
@@ -170,12 +120,8 @@ nav > ul > li > a {
 }
 
 .main-right-text {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding: 0 2vw;
   color: #000;
 }
@@ -195,22 +141,19 @@ nav > ul > li > a {
 footer {
   margin-top: 4vh;
   height: 6vh;
-  display: -ms-grid;
   display: grid;
   display: grid;
-  -ms-grid-columns: 4fr 1fr;
-      grid-template-columns: 4fr 1fr;
+  grid-template-columns: 4fr 1fr;
 }
 
 footer > .footer-left {
   height: 6vh;
-  width: 20vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  width: 60vw;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: flex-start;
+}
+footer > .footer-left .f-left {
+  margin-right: 2vw;
 }
 
 footer > .footer-left > .f-left a {
@@ -223,14 +166,9 @@ footer > .footer-left > .f-left > a:hover {
 }
 
 footer > .footer-right {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 4fr 1fr;
-      grid-template-columns: 4fr 1fr;
-  font-size: 1.5vw;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  grid-template-columns: 4fr 1fr;
+  align-items: center;
 }
 
 .fa-linkedin:before {
@@ -242,44 +180,43 @@ footer > .footer-right {
 }
 
 .github {
-  text-align: right;
+  text-align: center;
+  font-size: 1.7vw;
 }
 
 .link {
   text-align: center;
+  font-size: 1.7vw;
 }
 
 .firstRow {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 3fr 1fr;
-      grid-template-columns: 1fr 3fr 1fr;
+  grid-template-columns: 1fr 3fr 1fr;
   /* background-color: #ffff; */
   margin-top: 5vh;
 }
 
 .skills {
-  margin: 0;
   display: inline-block;
   width: 100vw;
+  margin-top: 7%;
 }
-
 .skills .header > h2 {
   color: #dad9d6;
-  text-align: left;
   margin-top: 5%;
-  font-family: 'roboto';
+  font-family: "roboto";
   font-size: 2.5vw;
 }
-
 .skills .header > input {
   outline-color: #db963f;
   display: none;
+  align-self: center;
 }
 
 .skills > .row {
   margin-top: 5%;
   display: inline-block;
+  text-align: center;
 }
 
 .skills > .row > div {
@@ -287,17 +224,17 @@ footer > .footer-right {
   text-align: center;
   border: 0.1vw solid #dad9d6;
   display: inline-block;
-  width: 24vw;
+  width: 22vw;
 }
 
 .skills > .row > div > a {
-  font-family: 'roboto';
+  font-family: "roboto";
   color: #dad9d6;
   font-size: 3vw;
   text-decoration: none;
 }
 
-.html1, .css1, .js1, .scss1, .node1, .bootstrap1 {
+.html1, .css1, .js1, .react1, .node1, .bootstrap1 {
   display: none;
 }
 
@@ -310,65 +247,36 @@ footer > .footer-right {
   padding: 1.5%;
   border: 0.05vw solid #dad9d6;
   opacity: 0;
-  -webkit-animation: showAlert 0.5s linear forwards;
-          animation: showAlert 0.5s linear forwards;
+  animation: showAlert 0.5s linear forwards;
 }
-
-@-webkit-keyframes showAlert {
-  from {
-    opacity: 0;
-    -webkit-transform: translateY(-5vw);
-            transform: translateY(-5vw);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
 @keyframes showAlert {
   from {
     opacity: 0;
-    -webkit-transform: translateY(-5vw);
-            transform: translateY(-5vw);
+    transform: translateY(-5vw);
   }
   to {
     opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
 }
-
 .alertBox .p-skill {
   color: #dad9d6;
 }
-
 .alertBox .btns {
   margin-top: 7%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
-
 .alertBox .btnYes, .alertBox .btnNo {
   width: 30%;
 }
-
 .alertBox .btnYes {
   background-color: green;
   border: none;
   color: #dad9d6;
   font-weight: bold;
 }
-
 .alertBox .btnNo {
   background-color: red;
   border: none;
@@ -380,20 +288,19 @@ footer > .footer-right {
   display: inline-block;
   margin-top: 2%;
   text-align: center;
+  width: 100%;
 }
-
 .about .card {
   display: inline-block;
   vertical-align: top;
-  margin: 2% 2% 0 0;
+  margin-top: 2%;
+  margin-left: 2%;
   text-align: start;
   height: auto;
 }
-
 .about .card-title {
   font-weight: 700;
 }
-
 .about .btn-primary {
   margin-top: 5%;
   background-color: transparent;
@@ -401,25 +308,20 @@ footer > .footer-right {
   color: #1d1f23;
   font-weight: 600;
 }
-
 .about .btn-primary:hover {
   background-color: #db963f;
 }
-
 .about .responsive {
   background-color: green;
   color: #fff;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   padding: 1% 2%;
   margin-top: 2%;
 }
-
 .about .not-responsive {
   background-color: red;
   color: #fff;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   padding: 1% 2%;
@@ -436,18 +338,15 @@ footer > .footer-right {
   }
   .container {
     margin: 0;
+    text-align: center;
+    --bs-gutter-x:0;
   }
   .container nav > ul > li > a {
     font-size: 4vw;
   }
   .container .main {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     height: auto;
   }
   .container .main .main-left div > h1 {
@@ -474,45 +373,48 @@ footer > .footer-right {
   .container .main .main-right .content-header .projects {
     font-size: 3.5vw;
   }
+  .container .skills {
+    margin-top: 10%;
+    text-align: center;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .container .skills .input {
+    margin-left: 19.5vw;
+  }
   .container .skills div > h2 {
     font-size: 6vw;
   }
   .container .skills .row {
     display: inline-block;
+    width: 100vw;
   }
   .container .skills .row div {
-    width: 46.5vw;
+    width: 70vw;
   }
   .container .skills .row div a {
     font-size: 5.5vw;
   }
   .container .about {
     display: inline-block;
-    width: 96vw;
-  }
-  .container footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
     width: 100vw;
   }
-  .container footer .footer-left {
+  .container .about .card {
+    margin-left: 0;
+  }
+  footer {
+    margin: 4% 4% 0 4%;
+  }
+  footer .footer-left {
     width: 70vw;
   }
-  .container footer .footer-left div > a {
+  footer .f-left {
     font-size: 3vw;
   }
-  .container footer .footer-right {
-    width: 25vw;
-    text-align: right;
+  footer .footer-right {
+    align-items: flex-start;
   }
-  .container footer .footer-right a {
-    font-size: 7vw;
-    margin-right: 2vw;
+  footer .github, footer .link {
+    font-size: 5vw;
   }
-}
-/*# sourceMappingURL=style1.css.map */
+}/*# sourceMappingURL=style1.css.map */

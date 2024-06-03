@@ -5,6 +5,7 @@ body{
     font-family: 'Roboto Serif', serif;
     box-sizing: border-box;
     background-color:#1d1f23;
+    overflow-x:hidden;
 }
 
 nav,p,li,a,ul,h2,h1,p,img,footer{
@@ -12,9 +13,7 @@ nav,p,li,a,ul,h2,h1,p,img,footer{
     padding:0;
 }
 
-.container{
-    margin:0 13vw;
-}
+
 nav{
     display:flex;
 }
@@ -132,8 +131,11 @@ footer{
 }
 footer > .footer-left{
     height: 6vh;
-    width: 20vw;
-    @include displayFlex2(flex,space-between);
+    width: 60vw;
+    @include displayFlex2(flex,flex-start);
+    .f-left{
+        margin-right:2vw;
+    }
 }
 
 footer > .footer-left > .f-left a{
@@ -145,7 +147,6 @@ footer > .footer-left > .f-left > a:hover{
 }
 footer > .footer-right{
 @include displayGrid(grid, 4fr 1fr);
-font-size:1.5vw;
 align-items: center;
 
 }
@@ -157,10 +158,12 @@ align-items: center;
     color:$color1-white;
 }
 .github{
-    text-align: right;
+    text-align: center;
+    font-size:1.7vw;
 }
 .link{
     text-align: center;
+    font-size:1.7vw;
 }
 
 .firstRow{
@@ -170,12 +173,11 @@ align-items: center;
 }
 
 .skills{
-    margin:0;
     display:inline-block;
     width: 100vw;
+    margin-top:7%;
     .header > h2{
      color: $color1-white;
-    text-align: left;
     margin-top:5%;
     font-family: 'roboto';
     font-size:$font-size1;
@@ -183,18 +185,20 @@ align-items: center;
     .header > input{
     outline-color: $color2-orange;
     display:none;
+    align-self: center;
     }
 }
 .skills > .row{
     margin-top:5%;
     display:inline-block;
+    text-align: center;
 }
 .skills > .row > div{
     padding:5% 0 10% 0;
     text-align: center;
     border:0.1vw solid $color1-white;
     display:inline-block;
-    width: 24vw;
+    width: 22vw;
 }
 .skills > .row > div > a{
     font-family:'roboto';
@@ -249,10 +253,12 @@ align-items: center;
     display:inline-block;
     margin-top:2%;
     text-align: center;
+    width: 100%;
     .card{
         display:inline-block;
         vertical-align: top;
-        margin:2% 2% 0 0;
+        margin-top:2%;
+        margin-left:2%;
         text-align: start;
         height:auto;
     }
@@ -297,6 +303,8 @@ align-items: center;
 
 .container{
     margin:0;
+    text-align: center;
+    --bs-gutter-x:0;
 
 nav > ul > li > a {
   font-size: 4vw;
@@ -335,13 +343,20 @@ nav > ul > li > a {
    }
  }
  .skills{
+    margin-top:10%;
+    text-align: center;
+    .input{
+        margin-left:19.5vw;
+    }
+    width:fit-content;
      div > h2{
          font-size:6vw;
      }
 .row{
     display:inline-block;
+    width: 100vw;
     div{
-        width:46.5vw;
+        width:70vw;
         a{
             font-size:5.5vw;
         }
@@ -351,25 +366,25 @@ nav > ul > li > a {
  }
 .about{
     display:inline-block;
-    width: 96vw;
+    width: 100vw;
+    .card{
+        margin-left:0;
+    }
 }
-footer{
-    @include displayFlex1(flex,row);
-    width:100vw;
-    .footer-left { 
+ }
+footer {
+    margin:4% 4% 0 4%;
+    .footer-left{
         width: 70vw;
-        div > a {
+    }
+    .f-left{
         font-size:3vw;
-      }
     }
     .footer-right{
-        width: 25vw;
-        text-align: right;
-        a{
-            font-size:7vw;
-            margin-right:2vw;
-        }
+        align-items: flex-start;
     }
-  }
- }
+    .github,.link{
+        font-size:5vw;
+    }
+}
 }
